@@ -1,7 +1,2 @@
-/** Nav links for Explore overlay (same destinations as Wind Home). */
-export const exploreNavLinks = [
-  { label: "Home", to: "/" },
-  { label: "About us", to: "/#about" },
-  { label: "Projects", to: "/#projects" },
-  { label: "Team", to: "/#team" },
-];
+/** Nav links for Explore overlay — re-export shared overlay routes. */
+export { overlayNavLinks as exploreNavLinks } from "pages/LandingPages/overlayNavLinks";

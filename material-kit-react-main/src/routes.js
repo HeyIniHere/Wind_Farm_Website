@@ -53,6 +53,7 @@ import SignIn from "layouts/pages/authentication/sign-in";
 // Lazy-loaded to avoid a circular import: WindHome imports this file for the navbar.
 const WindHomePage = lazy(() => import("pages/LandingPages/WindHome"));
 const ExplorePage = lazy(() => import("pages/LandingPages/Explore"));
+const TeamPage = lazy(() => import("pages/LandingPages/Team"));
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -99,6 +100,15 @@ const routes = [
             component: (
               <Suspense fallback={null}>
                 <ExplorePage />
+              </Suspense>
+            ),
+          },
+          {
+            name: "Team",
+            route: "/pages/landing-pages/team",
+            component: (
+              <Suspense fallback={null}>
+                <TeamPage />
               </Suspense>
             ),
           },

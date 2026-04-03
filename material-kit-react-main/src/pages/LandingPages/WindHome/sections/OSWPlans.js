@@ -10,12 +10,14 @@ import MKButton from "components/MKButton";
 function OSWPlans() {
   return (
     <MKBox
+      id="team"
       component="section"
       py={12}
       sx={{
         // Continuing the gradient across the screen
         background: "linear-gradient(180deg, #94af65 0%, #768f4d 100%)",
         position: "relative",
+        scrollMarginTop: "88px",
       }}
     >
       <Container>

@@ -9,12 +9,14 @@ import MKTypography from "components/MKTypography";
 function TechSpecs() {
   return (
     <MKBox
+      id="projects"
       component="section"
       py={12}
       sx={{
         // Pick up from the blue of WindJustice and move toward the light green
         background: "linear-gradient(180deg, #62a0bc 0%, #94af65 100%)",
         position: "relative",
+        scrollMarginTop: "88px",
       }}
     >
       <Container>

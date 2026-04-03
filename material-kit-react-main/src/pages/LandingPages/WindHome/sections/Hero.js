@@ -36,7 +36,7 @@ function Hero() {
                         lineHeight: 0.9,
                         mb: 3,
                         // GRADIENT TEXT IMPLEMENTATION:
-                        backgroundImage: "linear-gradient(180deg, #ffffff 30%, #63B3FF 100%)",
+                        backgroundImage: "linear-gradient(180deg, #ffffff 30%,rgb(8, 86, 158) 100%)",
                         WebkitBackgroundClip: "text", // cuts the background image gradient into the shape of the letters
                         WebkitTextFillColor: "transparent",
                         display: "inline-block",
@@ -48,8 +48,17 @@ function Hero() {
                     >
                         VIRTUAL OFFSHORE <br /> WIND FARM IN THE GULF OF MAINE
                     </MKTypography>
-                    <MKTypography variant="body1" color="white" opacity={0.8} px={6} mb={4} >
-                        A digital assistive virtual reality project to increase 
+                    <MKTypography
+                        variant="body1"
+                        px={6}
+                        mb={4}
+                        sx={{
+                            color: "rgb(144, 228, 247)",
+                            fontWeight: 500,
+                            lineHeight: 1.65,
+                        }}
+                    >
+                        A digital assistive virtual reality project to increase
                         understanding of floating wind technology.
                     </MKTypography>
                     <MKButton color="info" size="large" circular sx={{ px: 4 }}>

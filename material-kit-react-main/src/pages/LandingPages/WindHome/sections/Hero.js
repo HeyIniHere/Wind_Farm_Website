@@ -1,6 +1,7 @@
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
+import { Link as RouterLink } from "react-router-dom";
 
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
@@ -61,7 +62,14 @@ function Hero() {
                         A digital assistive virtual reality project to increase
                         understanding of floating wind technology.
                     </MKTypography>
-                    <MKButton color="info" size="large" circular sx={{ px: 4 }}>
+                    <MKButton
+                        component={RouterLink}
+                        to="/pages/landing-pages/explore"
+                        color="info"
+                        size="large"
+                        circular
+                        sx={{ px: 4 }}
+                    >
                         Explore the Turbines!
                     </MKButton>
                 </Grid>

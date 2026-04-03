@@ -8,6 +8,7 @@ import WindJustice from "./sections/WindJustice";
 import TechSpecs from "./sections/TechSpecs";
 import OSWPlans from "./sections/OSWPlans";
 import CommunityImpact from "./sections/CommunityImpact";
+import Footer from "./sections/Footer";
 
 function WindHomePage() {
   const { hash } = useLocation();
@@ -38,6 +39,7 @@ function WindHomePage() {
       <TechSpecs />
       <OSWPlans />
       <CommunityImpact />
+      <Footer />
     </MKBox>
     </>
   );

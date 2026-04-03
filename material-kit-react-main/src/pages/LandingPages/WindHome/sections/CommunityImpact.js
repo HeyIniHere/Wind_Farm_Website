@@ -57,7 +57,7 @@ function CommunityImpact() {
         position: "relative",
         overflow: "hidden",
         // Picks up OSWPlans bottom (#768f4d) → light lime mid → deeper olive at bottom
-        background: "linear-gradient(180deg, #768f4d 0%, #b8d68a 38%, #c8e6a0 52%, #4d5c32 100%)",
+        background: "linear-gradient(180deg, #768f4d 0%,  #4d5c32 100%)",
         scrollMarginTop: "88px",
       }}
     >

@@ -19,6 +19,7 @@ function Hero() {
                 background: "linear-gradient(180deg, #A1C4FD 0%, #C2E9FB 50%)",
                 display: "grid",
                 placeItems: "center",
+                pt: { xs: 10, md: 11 },
             }}
         >
             <Container>

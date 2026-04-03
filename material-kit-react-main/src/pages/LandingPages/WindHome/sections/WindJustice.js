@@ -9,6 +9,7 @@ import MKTypography from "components/MKTypography";
 function WindJustice() {
   return (
     <MKBox
+      id="about"
       component="section"
       minHeight="100vh"
       py={12}
@@ -17,6 +18,7 @@ function WindJustice() {
         background: "linear-gradient(180deg, #C2E9FB 20%, #62a0bc 100%)",
         position: "relative",
         overflow: "hidden",
+        scrollMarginTop: "88px",
       }}
     >
       <Container>

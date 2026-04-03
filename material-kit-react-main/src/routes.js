@@ -13,6 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+import { lazy, Suspense } from "react";
+
 /** 
   All of the routes for the Material Kit 2 React are added here,
   You can add a new route, customize the routes and delete the routes here.
@@ -47,7 +49,9 @@ import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
-import WindHomePage from "pages/LandingPages/WindHome";
+
+// Lazy-loaded to avoid a circular import: WindHome imports this file for the navbar.
+const WindHomePage = lazy(() => import("pages/LandingPages/WindHome"));
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -82,7 +86,11 @@ const routes = [
           {
             name: "Wind Justice Home",
             route: "/pages/landing-pages/wind-home",
-            component: <WindHomePage />,
+            component: (
+              <Suspense fallback={null}>
+                <WindHomePage />
+              </Suspense>
+            ),
           },
           {
             name: "about us",

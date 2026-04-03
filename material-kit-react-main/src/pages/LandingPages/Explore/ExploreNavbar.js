@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
 import AppBar from "@mui/material/AppBar";
@@ -14,7 +15,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 
-import { exploreNavLinks } from "./nav.routes";
+import { exploreNavLinks as defaultNavLinks } from "./nav.routes";
 
 const LINK_IDLE = "rgba(255, 255, 255, 0.95)";
 const LINK_ACTIVE = "#7EC8E3";
@@ -55,7 +56,13 @@ function InsiteLogo() {
   );
 }
 
-function ExploreNavbar() {
+function navLinkEndProp(to) {
+  if (to === "/") return true;
+  if (to.startsWith("/pages/")) return true;
+  return false;
+}
+
+function ExploreNavbar({ navLinks = defaultNavLinks }) {
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -73,12 +80,12 @@ function ExploreNavbar() {
         py: { xs: 2, md: 0 },
       }}
     >
-      {exploreNavLinks.map(({ label, to }) => (
+      {navLinks.map(({ label, to }) => (
         <Typography
           key={label}
           component={NavLink}
           to={to}
-          end={to === "/"}
+          end={navLinkEndProp(to)}
           onClick={() => setMobileOpen(false)}
           sx={{
             fontWeight: 600,
@@ -184,5 +191,14 @@ function ExploreNavbar() {
     </>
   );
 }
+
+ExploreNavbar.propTypes = {
+  navLinks: PropTypes.arrayOf(
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    })
+  ),
+};
 
 export default ExploreNavbar;

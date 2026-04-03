@@ -1,5 +1,5 @@
-/** Nav links for Wind Home (INSITE LAB). Team opens the dedicated Team page. */
-export const windHomeNavLinks = [
+/** Shared overlay-style nav (Explore, Team, etc.). */
+export const overlayNavLinks = [
   { label: "Home", to: "/" },
   { label: "About us", to: "/#about" },
   { label: "Projects", to: "/#projects" },

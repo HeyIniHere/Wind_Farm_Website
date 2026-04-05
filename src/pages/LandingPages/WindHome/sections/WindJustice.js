@@ -6,6 +6,8 @@ import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
+import { WIND_HOME_SCROLL_MARGIN } from "../windHomeLayout";
+
 function WindJustice() {
   return (
     <MKBox
@@ -18,7 +20,7 @@ function WindJustice() {
         background: "linear-gradient(180deg, #C2E9FB 20%, #62a0bc 100%)",
         position: "relative",
         overflow: "hidden",
-        scrollMarginTop: "88px",
+        scrollMarginTop: WIND_HOME_SCROLL_MARGIN,
       }}
     >
       <Container>

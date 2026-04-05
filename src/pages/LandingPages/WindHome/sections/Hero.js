@@ -8,6 +8,8 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 
+import { WIND_HOME_SCROLL_MARGIN } from "../windHomeLayout";
+
 function Hero() {
     return (
         <MKBox
@@ -18,9 +20,14 @@ function Hero() {
             sx={{
                 //Implementing a blue gradient that starts of the color scheme for th efull page
                 background: "linear-gradient(180deg, #A1C4FD 0%, #C2E9FB 50%)",
-                display: "grid",
-                placeItems: "center",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                boxSizing: "border-box",
                 pt: { xs: 10, md: 11 },
+                pb: WIND_HOME_SCROLL_MARGIN,
+                overflow: "hidden",
             }}
         >
             <Container>

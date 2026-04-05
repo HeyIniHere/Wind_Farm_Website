@@ -2,6 +2,6 @@
 export const windHomeNavLinks = [
   { label: "Home", to: "/" },
   { label: "About us", to: "/#about" },
-  { label: "Projects", to: "/#projects" },
+  { label: "Explore", to: "/pages/landing-pages/explore" },
   { label: "Team", to: "/pages/landing-pages/team" },
 ];

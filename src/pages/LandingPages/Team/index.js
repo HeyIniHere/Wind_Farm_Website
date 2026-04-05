@@ -29,7 +29,7 @@ function TeamMemberCard({ name, role, photo }) {
                   backgroundImage: `url(${photo})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center top",
-                  border: "3px solid rgba(255, 255, 255, 0.55)",
+                  border: `3px solid ${NAME_COLOR}`,
                   boxShadow: "0 8px 32px rgba(0, 0, 0, 0.2)",
                 }
               : {

@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import Box from "@mui/material/Box";
 
-import insiteLogo from "assets/images/insite_logo.png";
+import insiteLogo from "assets/images/insite_logo.svg";
 
 function InsiteLogoMark({ sx, ...props }) {
   return (
     <Box
       component="img"
       src={insiteLogo}
-      alt=""
+      alt="INSITE LAB"
       sx={{
         height: { xs: 40, md: 44 },
         width: "auto",

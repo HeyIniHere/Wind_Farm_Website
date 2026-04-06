@@ -14,6 +14,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
+import InsiteLogoMark from "components/InsiteLogoMark";
+
 import { exploreNavLinks as defaultNavLinks } from "./nav.routes";
 
 const BRAND = "#002D62";
@@ -21,77 +23,6 @@ const LINK_LIGHT = "#4A90E2";
 
 const DARK_LINK_IDLE = "rgba(255, 255, 255, 0.95)";
 const DARK_LINK_ACTIVE = "#7EC8E3";
-
-function InsiteLogoDark() {
-  return (
-    <Box
-      component="span"
-      sx={{
-        width: 44,
-        height: 44,
-        borderRadius: "50%",
-        bgcolor: "rgba(255, 255, 255, 0.2)",
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-        border: "1px solid rgba(255, 255, 255, 0.35)",
-      }}
-      aria-hidden
-    >
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="3" fill="white" />
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => (
-          <line
-            key={i}
-            x1="16"
-            y1="16"
-            x2={16 + 10 * Math.cos(((deg - 90) * Math.PI) / 180)}
-            y2={16 + 10 * Math.sin(((deg - 90) * Math.PI) / 180)}
-            stroke="white"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        ))}
-      </svg>
-    </Box>
-  );
-}
-
-function InsiteLogoLight() {
-  return (
-    <Box
-      component="span"
-      sx={{
-        width: 44,
-        height: 44,
-        borderRadius: "50%",
-        bgcolor: BRAND,
-        display: "inline-flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexShrink: 0,
-      }}
-      aria-hidden
-    >
-      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="16" cy="16" r="3" fill="white" />
-        {[0, 45, 90, 135, 180, 225, 270, 315].map((deg, i) => (
-          <line
-            key={i}
-            x1="16"
-            y1="16"
-            x2={16 + 10 * Math.cos(((deg - 90) * Math.PI) / 180)}
-            y2={16 + 10 * Math.sin(((deg - 90) * Math.PI) / 180)}
-            stroke="white"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-          />
-        ))}
-      </svg>
-    </Box>
-  );
-}
 
 function navLinkEndProp(to) {
   if (to === "/") return true;
@@ -192,8 +123,12 @@ function ExploreNavbar({
   const showHamburger = showMobileMenu && !isMdUp;
   const showMobileInlineNav = !showMobileMenu && !isMdUp;
 
-  const brandColor = isLight ? BRAND : "#ffffff";
   const hamburgerColor = isLight ? LINK_LIGHT : "#ffffff";
+
+  const logoSx = {
+    height: { xs: 38, md: 42 },
+    maxWidth: { xs: 200, md: 240 },
+  };
 
   const drawerPaperSx = isLight
     ? { width: 280, pt: 2, bgcolor: "#E6F0FF" }
@@ -230,18 +165,7 @@ function ExploreNavbar({
                 flexShrink: 0,
               }}
             >
-              {isLight ? <InsiteLogoLight /> : <InsiteLogoDark />}
-              <Typography
-                sx={{
-                  fontWeight: 800,
-                  fontSize: { xs: "1.05rem", md: "1.15rem" },
-                  color: brandColor,
-                  letterSpacing: "0.06em",
-                  fontFamily: theme.typography.fontFamily,
-                }}
-              >
-                INSITE LAB
-              </Typography>
+              <InsiteLogoMark sx={logoSx} />
             </Box>
 
             <Box

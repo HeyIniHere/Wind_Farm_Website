@@ -2,8 +2,9 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 import MKBox from "components/MKBox";
+import ExploreNavbar from "pages/LandingPages/Explore/ExploreNavbar";
 import Hero from "pages/LandingPages/WindHome/sections/Hero";
-import WindHomeNavbar from "./WindHomeNavbar";
+import { windHomeNavLinks } from "./nav.routes";
 import WindJustice from "./sections/WindJustice";
 import TechSpecs from "./sections/TechSpecs";
 import OSWPlans from "./sections/OSWPlans";
@@ -24,7 +25,7 @@ function WindHomePage() {
 
   return (
     <>
-      <WindHomeNavbar />
+      <ExploreNavbar navLinks={windHomeNavLinks} variant="light" />
     <MKBox
       component="main"
       sx={{

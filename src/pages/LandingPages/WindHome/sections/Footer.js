@@ -139,7 +139,7 @@ function Footer() {
             {linkColumn("Company", [
               { label: "About Us", to: "/#about" },
               { label: "Careers", to: "#careers" },
-              { label: "Contact", to: "/pages/landing-pages/contact-us" },
+              { label: "Contact", to: "#contact" },
             ])}
           </Grid>
 
@@ -154,7 +154,7 @@ function Footer() {
             {linkColumn("Legal", [
               { label: "Press", to: "#press" },
               { label: "Privacy", to: "#privacy" },
-              { label: "Contact", to: "/pages/landing-pages/contact-us" },
+              { label: "Contact", to: "#contact-legal" },
             ])}
           </Grid>
         </Grid>

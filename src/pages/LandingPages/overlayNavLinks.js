@@ -4,5 +4,4 @@ export const overlayNavLinks = [
   { label: "About us", to: "/pages/landing-pages/wind-home#about" },
   { label: "Explore", to: "/pages/landing-pages/explore" },
   { label: "Team", to: "/pages/landing-pages/team" },
-  { label: "Contact", to: "/pages/landing-pages/contact-us" },
 ];

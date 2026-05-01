@@ -22,7 +22,6 @@ import Icon from "@mui/material/Icon";
 const WindHomePage = lazy(() => import("pages/LandingPages/WindHome"));
 const ExplorePage = lazy(() => import("pages/LandingPages/Explore"));
 const TeamPage = lazy(() => import("pages/LandingPages/Team"));
-const ContactUsPage = lazy(() => import("pages/LandingPages/ContactUs"));
 
 const routes = [
   {
@@ -58,15 +57,6 @@ const routes = [
             component: (
               <Suspense fallback={null}>
                 <TeamPage />
-              </Suspense>
-            ),
-          },
-          {
-            name: "contact us",
-            route: "/pages/landing-pages/contact-us",
-            component: (
-              <Suspense fallback={null}>
-                <ContactUsPage />
               </Suspense>
             ),
           },

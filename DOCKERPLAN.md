@@ -1,6 +1,6 @@
 # Docker plan — Wind Farm website
 
-Commands assume PowerShell and that your project root is `Wind_Farm_Website`.
+Commands assume PowerShell and that the project root is `Wind_Farm_Website`.
 
 ## Build the image
 
